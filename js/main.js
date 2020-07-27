@@ -42,6 +42,7 @@
 
       addNewTask(newTaskContent);
 
+      test
 
     }
 

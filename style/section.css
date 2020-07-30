@@ -1,0 +1,24 @@
+.section {
+    max-width: 900px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.section__header {
+  margin: 0 20px 20px;
+}
+
+.section__subheader {
+  background-color: #fff;
+  box-shadow: 0px 0px 8px #aaa;
+  padding: 20px 15px;
+  margin: 0 20px 2px;
+}
+
+.section__subheader-down{
+  box-shadow: 0px 5px 8px #aaa;
+  margin: 10px 20px 2px;
+}

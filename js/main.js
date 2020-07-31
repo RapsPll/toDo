@@ -10,6 +10,21 @@
     }
   ];
 
+  const renderTask = () => {
+    let htmlString = "";
+    for (const task of tasks) {
+      htmlString += `
+      <li class="task form__task" >
+      <button class="list__buttonDone js-done">${task.done ? "&#10003;" : " "} </button>
+      <span ${task.done ? "style = \"text-decoration: line-through\" " : ""} >${task.content}</span>
+      <div class="test"><button class="list__buttonRemove js-remove">🗑️</button></div>
+      </li>
+      `;
+    }
+    
+    document.querySelector(".js-tasks").innerHTML=htmlString;
+  }
+
   const addNewTask = (newTaskContent) => {
     tasks.push({
       content: newTaskContent,
@@ -47,26 +62,11 @@
   }
 
   const render = () => {
-    let htmlString = "";
-    for (const task of tasks) {
-      htmlString += `
-      <li class="task form__task" >
-      <button class="list__buttonDone js-done">${task.done ? "&#10003;" : " "} </button>
-      <span ${task.done ? "style = \"text-decoration: line-through\" " : ""} >${task.content}</span>
-      <div class="test"><button class="list__buttonRemove js-remove">🗑️</button></div>
-      </li>
-      `;
-    }
-    
-    document.querySelector(".js-tasks").innerHTML=htmlString;
-
-    
+    renderTask();
 
     bindEvents();
 
-
     };
-
 
 
     const onFormSubmit = (event) => {

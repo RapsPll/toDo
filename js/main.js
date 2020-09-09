@@ -21,7 +21,7 @@
       </li>
       `;
     }
-    
+
     document.querySelector(".js-tasks").innerHTML=htmlString;
   }
 
@@ -45,7 +45,7 @@
 
   const bindEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
-    
+
     removeButtons.forEach((removeButton, index) => {
       removeButton.addEventListener("click", () => {
         removeTask(index);
@@ -53,7 +53,7 @@
     })
 
     const toggleDoneButton = document.querySelectorAll(".js-done");
-    
+
     toggleDoneButton.forEach((toggleDoneButton, index) => {
       toggleDoneButton.addEventListener("click", () => {
         toggleTaskDone(index);
